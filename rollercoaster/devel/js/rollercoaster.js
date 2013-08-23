@@ -227,7 +227,6 @@ function rollercoasterSlider(element){
         if(currentPane+times <= paneCount){
             offset = -((100/paneCount)*(currentPane-1+times));
             currentPane = currentPane+times;
-
             element.children("section.active").children(".pane.active").removeClass("active");
             element.children("section.active").children(".pane[data-minimap-id='"+(currentPane)+"']").addClass("active");
 
