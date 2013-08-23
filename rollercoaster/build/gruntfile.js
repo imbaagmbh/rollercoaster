@@ -6,7 +6,7 @@ module.exports = function(grunt) {
         less: {
             main_style: {
                 src:"<%= pkg.src_folder %>/css/style.less",
-                dest:"../css/style.css"
+                dest:"../css/rollercoaster.css"
             }
         },
 
@@ -23,7 +23,7 @@ module.exports = function(grunt) {
         cssmin: {
             main_css: {
                 src : '<%= less.main_style.dest %>',
-                dest: '<%= pkg.target_folder %>/css/style.min.css'
+                dest: '<%= pkg.target_folder %>/css/rollercoaster.min.css'
             }
         },
         uglify: {
