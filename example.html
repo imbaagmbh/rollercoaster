@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Full Screen Slider</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+
+
+        <link rel="stylesheet/less" type="text/css" href="devel/css/style.less" />
+
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/jquery-1.9.1.min.js"></script>
+        <script src="js/vendor/jquery.hammer.min.js"></script>
+        <script src="js/vendor/less-1.3.3.min.js"></script>
+        <script src="devel/js/rollercoaster.js"></script>
+
+        <!-- Piwik -->
+        <script type="text/javascript">
+            var _paq = _paq || [];
+            _paq.push(["trackPageView"]);
+            _paq.push(["enableLinkTracking"]);
+
+            (function() {
+                var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.imbaa.de/";
+                _paq.push(["setTrackerUrl", u+"piwik.php"]);
+                _paq.push(["setSiteId", "8"]);
+                var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+                g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+            })();
+        </script>
+        <!-- End Piwik Code -->
+
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+
+        <div id="myRollercoaster" class="rollercoaster_slider">
+
+            <a role="button" class="navigation_item down" >Down</a>
+            <a role="button" class="navigation_item up" >Up</a>
+            <a role="button" class="navigation_item left">Left</a>
+            <a role="button" class="navigation_item right">Right</a>
+
+            <div class="section_wrapper">
+
+                <section class="vertical_slide" data-section-title="Animals">
+                    <div data-background="https://raw.github.com/imbaa/Rollercoaster-Slider/gh-pages/img/animals/Lizzard.jpg" class="pane"></div>
+                    <div data-background="https://raw.github.com/imbaa/Rollercoaster-Slider/gh-pages/img/animals/Pelikan.jpg" class="pane"></div>
+                </section>
+
+                <section class="vertical_slide" data-section-title="Flowers">
+                    <div data-background="https://raw.github.com/imbaa/Rollercoaster-Slider/gh-pages/img/flowers/Dahlie-1.jpg" class="pane"></div>
+                </section>
+
+            </div>
+        </div>
+
+
+        <script>
+        $(document).ready(function(){
+            var rollercoaster = new rollercoasterSlider("#myRollercoaster");
+            rollercoaster.init();
+        });
+        </script>
+    </body>
+</html>
