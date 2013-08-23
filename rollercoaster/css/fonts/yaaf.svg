@@ -1,0 +1,46 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-6-30: Created.
+-->
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>
+Created by FontForge 20110222 at Sun Jun 30 15:59:08 2013
+ By Ubuntu
+Created by Ubuntu with FontForge 2.0 (http://fontforge.sf.net)
+</metadata>
+<defs>
+<font id="iconvault" horiz-adv-x="512" >
+  <font-face 
+    font-family="iconvault"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="512"
+    panose-1="2 0 6 9 0 0 0 0 0 0"
+    ascent="448"
+    descent="-64"
+    bbox="27.2949 -36.7051 484.695 420.695"
+    underline-thickness="25.6"
+    underline-position="-51.2"
+    unicode-range="U+F100-F107"
+  />
+    <missing-glyph />
+    <glyph glyph-name="uniF100" unicode="&#xf100;" 
+d="M256 -36.7002c-126.306 0 -228.695 102.39 -228.695 228.695c0 126.305 102.39 228.694 228.695 228.694s228.695 -102.39 228.695 -228.694c0 -126.306 -102.39 -228.695 -228.695 -228.695zM369.475 302.551l-259.687 -109.9l259.687 -109.906l-46.5254 109.906z" />
+    <glyph glyph-name="uniF101" unicode="&#xf101;" 
+d="M187.09 191.457l-45.8594 110.562l260.981 -110.674l-260.981 -111.913z" />
+    <glyph glyph-name="uniF102" unicode="&#xf102;" 
+d="M256 420.695c126.306 0 228.695 -102.39 228.695 -228.695s-102.39 -228.695 -228.695 -228.695s-228.695 102.39 -228.695 228.695s102.39 228.695 228.695 228.695zM142.525 81.4434l259.687 109.901l-259.687 109.9l46.5205 -109.9z" />
+    <glyph glyph-name="uniF103" unicode="&#xf103;" 
+d="M255.457 260.91l110.562 45.8594l-110.674 -260.981l-111.913 260.981z" />
+    <glyph glyph-name="uniF104" unicode="&#xf104;" 
+d="M27.3047 192c0 126.306 102.39 228.695 228.695 228.695s228.695 -102.39 228.695 -228.695s-102.39 -228.695 -228.695 -228.695s-228.695 102.39 -228.695 228.695zM366.557 78.5254l-109.901 259.687l-109.9 -259.687l109.9 46.5254z" />
+    <glyph glyph-name="uniF105" unicode="&#xf105;" 
+d="M256.543 123.09l-110.562 -45.8594l110.674 260.981l111.918 -260.981z" />
+    <glyph glyph-name="uniF106" unicode="&#xf106;" 
+d="M324.91 192.543l45.8594 -110.562l-260.981 110.674l260.981 111.913z" />
+    <glyph glyph-name="uniF107" unicode="&#xf107;" 
+d="M484.685 191.99c0 -126.311 -102.39 -228.695 -228.694 -228.695c-126.306 0 -228.695 102.39 -228.695 228.695c0 126.305 102.39 228.694 228.695 228.694c126.305 0 228.694 -102.39 228.694 -228.694zM145.434 305.464l109.9 -259.686l109.906 259.686
+l-109.906 -46.5254z" />
+  </font>
+</defs></svg>

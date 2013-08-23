@@ -1,0 +1,78 @@
+.github_ribbon {
+    position: absolute; top: 0; left: 0; border: 0;
+}
+
+h1, h2, h3 {
+    color:#12415c;
+}
+
+p, ul{
+    color: #29546a;
+}
+
+header.page-header{
+    background-repeat: no-repeat;
+}
+
+header.page-header h1{
+    text-indent: -10000px;
+    background-image:url(images/rollercoaster-logo.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    height:50px;
+}
+
+footer.rc-footer ul.social a:link{
+    display:block;
+    text-indent:-9999px;
+    width:30px;
+    height:30px;
+    overflow:hidden;
+    background-size:30px;
+    margin-top:10px;
+}
+
+footer.rc-footer ul.social a:link.facebook {
+    background-image:url(images/icons/facebook.png);
+}
+
+footer.rc-footer ul.social a:hover.facebook {
+    background-image:url(images/icons/facebook_color.png);
+}
+
+footer.rc-footer ul.social a:link.twitter {
+    background-image:url(images/icons/twitter.png);
+}
+
+footer.rc-footer ul.social a:hover.twitter {
+    background-image:url(images/icons/twitter_color.png);
+}
+footer.rc-footer ul.social a:link.googleplus {
+    background-image:url(images/icons/googleplus.png);
+}
+
+footer.rc-footer ul.social a:hover.googleplus {
+    background-image:url(images/icons/googleplus_color.png);
+}
+
+footer.rc-footer{
+    text-align: center;
+}
+
+table td,
+table th {
+
+    padding:10px;
+}
+
+@media screen and (max-width:810px){
+    header.page-header h1{
+        margin-left:100px;
+    }
+}
+
+@media screen and (max-width:640px){
+    body {
+        padding: 20px !important;
+    }
+}

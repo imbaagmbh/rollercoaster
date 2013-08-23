@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="css/basic.css" rel="stylesheet" media="screen">
+
+    <!-- Bootstrap CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet" media="screen">
+
+
+    <!-- Bootstrap JS -->
+    <script src="js/bootstrap.min.js"></script>
+
+
+    <script src="rollercoaster/js/vendor/modernizr-2.6.2.min.js"></script>
+    <script src="rollercoaster/js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="rollercoaster/js/vendor/jquery.hammer.min.js"></script>
+    <script src="rollercoaster/js/rollercoaster.min.js"></script>
+
+    <link href="rollercoaster/css/rollercoaster.min.css" rel="stylesheet" media="screen">
+
+    <title>RolLErCoAsTeR | imbaa.de</title>
+
+    <!-- Piwik -->
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        _paq.push(["trackPageView"]);
+        _paq.push(["enableLinkTracking"]);
+
+        (function() {
+            var u=(("https:" == document.location.protocol) ? "https" : "http") + "://stats.imbaa.de/";
+            _paq.push(["setTrackerUrl", u+"piwik.php"]);
+            _paq.push(["setSiteId", "7"]);
+            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
+            g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+    <!-- End Piwik Code -->
+</head>
+<body>
+<div class="container" style="max-width:600px;">
+    <header class="page-header">
+        <a href="https://github.com/you"><img class="github_ribbon" src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png" alt="Fork me on GitHub"></a>
+        <h1>Rollercoaster <small>horizontal and vertical photo slider with touch support</small></h1>
+    </header>
+
+    <article>
+
+    <h2>Why Rollercoaster?</h2>
+    <p>Rollercoaster was created as a substitude for the Bootstrap Carousel. We needed a Slider wich is able to scroll horizontally
+        and vertically through a set of images and text-content and provides a certain level of remote-controll functionality. As the Bootstrap 2 carousel was using JavaScript to create the transitions,
+        the performance of the first Bootstrap-Based solution was quite poor and appropriate touch support was quite difficult – not to say impossible – to implement.</p>
+    <h2>What Rollercoaster is</h2>
+    <p>So here we are, presenting our own solution, inspired by the <a href='http://eightmedia.github.io/hammer.js/examples/carousel.html' title="Touch carousel script">Carousel Script made by Eightmedia</a>, to the problem: Rollercoaster is a responsive slider with the capability to slide horizontally and vertically between multiple levels
+        of pictures and/or content. The slider has a lazyload function, supports touch-gestures (<a href='http://eightmedia.github.io/hammer.js/' title="Official Hammer.js website">Hammer.js</a>) and comes with a handy minimap to facilitate orientation between the different levels of the slider.</p>
+
+    <p>Rollercoaster is retina ready and uses it's own icon font for navigation. Of course you are able to change everything in Rollercoaster's appearance within the CSS-file.</p>
+
+
+
+    <h2>Features</h2>
+
+    <p>Rollercoaster is a lightweight horizontal and vertical slider library for jQuery and offers the following features.</p>
+
+    <ul>
+        <li>Full screen Slider</li>
+        <li>Multiple sliders per page</li>
+        <li>CSS3 transitions for smooth hardware-accelerated slidethrough</li>
+        <li>Touchscreen support</li>
+        <li>Lazyload features for shorter loading times</li>
+        <li>Optional minimap for easier navigation</li>
+        <li>Retina ready</li>
+    </ul>
+
+    <h2>How to use Rollercoaster</h2>
+
+    <p>To use Rollercoaster you have to include jQuery, Modernizr and Hammer.js into you website.</p>
+
+<pre>
+&lt;script src="js/vendor/modernizr-2.6.2.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/vendor/jquery-1.9.1.min.js"&gt;&lt;/script&gt;
+&lt;script src="js/vendor/jquery.hammer.min.js"&gt;&lt;/script&gt;
+</pre>
+
+     <p>After this include the rollercoaster.js and the rollercoaster.css. You are ready to go!</p>
+
+<pre>
+&lt;script src="js/rollercoaster.js"&gt;&lt;/script&gt;
+</pre>
+
+    <p>Rollercoaster needs some basic HTML-Markup to work properly. We use HTML5-Sections for this purpose.</p>
+
+
+
+<pre>
+&lt;div id="myRollercoaster" class="rollercoaster_slider"&gt;
+
+    &lt;a class="navigation_item down"&gt;Down&lt;/a&gt;
+    &lt;a class="navigation_item up"&gt;Up&lt;/a&gt;
+    &lt;a class="navigation_item left"&gt;Left&lt;/a&gt;
+    &lt;a class="navigation_item right"&gt;Right&lt;/a&gt;
+
+     &lt;div class="section_wrapper"&gt;
+
+         &lt;section class="vertical_slide" data-section-title="Section 1"&gt;
+             &lt;div data-background="picture1.jpg" class="pane"&gt;&lt;/div&gt;
+             &lt;div data-background="picture2.jpg" class="pane"&gt;&lt;/div&gt;
+         &lt;/section&gt;
+
+        &lt;section class="vertical_slide" data-section-title="Section 2"&gt;
+             &lt;div data-background="picture3.jpg" class="pane"&gt;&lt;/div&gt;
+         &lt;/section&gt;
+
+        (...)
+
+    &lt;/div&gt;
+
+&lt;/div&gt;
+</pre>
+
+    <p>The last thing you have to do is to initialize the script.</p>
+
+<pre>
+&lt;script&gt;
+    $(document).ready(function(){
+        var rctr = new rollercoaster_slider("#myRollercoaster");
+        rctr.init();
+    }
+&lt;/script&gt;
+</pre>
+
+    <p>This is it! Your slider is ready to go.</p>
+
+        <div id="myRollercoaster" class="rollercoaster_slider" style="height:400px;">
+
+            <a class="navigation_item down">Down</a>
+            <a class="navigation_item up">Up</a>
+            <a class="navigation_item left">Left</a>
+            <a class="navigation_item right">Right</a>
+
+            <div class="section_wrapper">
+
+                <section class="vertical_slide" data-section-title="Animals">
+                    <div data-background="https://raw.github.com/imbaa/Rollercoaster-Slider/gh-pages/img/animals/Lizzard.jpg" class="pane"></div>
+                    <div data-background="https://raw.github.com/imbaa/Rollercoaster-Slider/gh-pages/img/animals/Pelikan.jpg" class="pane"></div>
+                </section>
+
+                <section class="vertical_slide" data-section-title="Nature">
+                    <div data-background="https://raw.github.com/imbaa/Rollercoaster-Slider/gh-pages/img/flowers/Leaf.jpg" class="pane"></div>
+                </section>
+
+            </div>
+
+        </div>
+
+        <script>
+            $(document).ready(function(){
+                var rollercoaster = new rollercoasterSlider("#myRollercoaster");
+                rollercoaster.init();
+            });
+        </script>
+
+    <p><br>Check out the <a href="full_screen_example.html">full-screen implementation of Rollercoaster</a>!</p>
+
+    <h3>Settings</h3>
+    <p>The default settings enable all features of the slider including lazyload, minimap and support for all available touch events. You can overwrite the default settings by using the settings-parameter in the init()-function.</p>
+<pre>
+rollercoaster.init({minimap:false,lazyload:false});
+</pre>
+    <p>In the current version of the slider the following settings are possible. Default values are highlighted in <strong>bold-type</strong>.</p>
+        <table width="100%">
+            <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+                <th>Values</th>
+            </tr>
+            <tr>
+                <td valign="top">lazyLoad</td>
+                <td valign="top">Enables lazyload functionality</td>
+                <td><strong>true</strong><br>false</td>
+            </tr>
+            <tr>
+                <td valign="top">hammerListeners</td>
+                <td valign="top">Defines which Touch-Events hammer.js will listen to. It is recommended to deactivate dragup and dragdown
+                    if you want to implement the slider as inline element of your website. Otherwise users will not be able to scroll past it.</td>
+                <td><strong>swipeleft swiperight dragleft dragright dragend release dragup dragdown swipeup swipedown</strong></td>
+            </tr>
+            <tr>
+                <td valign="top">minimap</td>
+                <td valign="top">Turn the minimap on or off</td>
+                <td><strong>true</strong>, false</td>
+            </tr>
+        </table>
+
+
+        <h3>Methods</h3>
+        <p>You can use the default navigation-elements of the slider or create your own custom navigation with a vew lines of JavaScript. The following methods can be used to conrol the slider. Default values are highlightet in <strong>bold-type</strong>.</p>
+
+
+
+        <table width="100%">
+            <tr>
+                <th>Method</th>
+                <th>Description</th>
+                <th>Values</th>
+            </tr>
+            <tr>
+                <td valign="top">.goUp(times);</td>
+                <td valign="top">Slides x-times up</td>
+                <td><strong>times: 1</strong>-x</td>
+            </tr>
+            <tr>
+                <td valign="top">.goDown(times);</td>
+                <td valign="top">Slides x-times down</td>
+                <td><strong>times: 1</strong>-x</td>
+            </tr>
+            <tr>
+                <td valign="top">.rightPane(times);</td>
+                <td valign="top">Slides x-times to the left</td>
+                <td><strong>times: 1</strong>-x</td>
+            </tr>
+            <tr>
+                <td valign="top">.leftPane(times);</td>
+                <td valign="top">Slides x-times to the right</td>
+                <td><strong>times: 1</strong>-x</td>
+            </tr>
+
+        </table>
+
+
+
+    <h2>Dependencies & Support</h2>
+    <p>Rollercoaster needs jQuery, Modernizr and Hammer.js to work properly. We try to get Rollercoaster running on as manny browsers as possibles.
+        Nevertheless we are for a progression of the web and won't create support for legacy browsers unless it is really necessary.</p>
+
+    <p>The current version of Rollercoaster is tested with the following borwsers and should be compatible with upcoming versions:
+        Safari 6.0.5,
+        Chrome 28,
+        Firefox 22,
+        Internet Explorer 10+,
+        Mobile Safari (iOS6),
+        Mobile Chrome (iOS6) and
+        Android Standard Browser.
+    </p>
+
+
+
+    <p>If you have any questions, feel free to contact us. We will try to respond as fast as possible.</p>
+
+
+    <h2>License</h2>
+    <p>Rollercoaster is licensed under the MIT License (MIT)</p>
+    <p>Copyright (c) 2013 imbaa Kreativagentur</p>
+    <p>Permission is hereby granted, free of charge, to any person obtaining a copy
+            of this software and associated documentation files (the "Software"), to deal
+            in the Software without restriction, including without limitation the rights
+            to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+            copies of the Software, and to permit persons to whom the Software is
+            furnished to do so, subject to the following conditions:</p>
+    <p>The above copyright notice and this permission notice shall be included in
+            all copies or substantial portions of the Software.</p>
+    <p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+            IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+            FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+            AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+            LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+            OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+            THE SOFTWARE.</p>
+    <h2>Wishlist</h2>
+    <p>We want to push development of Rollercoaster forward and add further features for the slider. Is there a feature you're missing? We're open for discussion!</p>
+
+    <h2>Download</h2>
+    <a href='#' class="btn btn-success btn-block btn-lg">Good old download button</a>
+    </article>
+
+    <footer class="rc-footer">
+        <hr>
+        <p>Rollercoaster Slider © 2013 imbaa Kreativagentur</p>
+        <strong>Share the Rollercoaster:</strong>
+            <ul class="list-inline social">
+                <li><a href="https://twitter.com/intent/tweet?related=t3n&text=%20steht%20dann%20der%20Text,%20der%20getweetet%20werden%20soll...&url=http://www.rollercoaster.imbaa.de/&via=imbaacreative&lang=de" class="twitter">Twitter</a></li>
+                <li><a href="http://www.facebook.com/sharer.php?u=http://rollercoaster.imbaa.de/" rel="popup" class="facebook">Facebook</a></li>
+                <li><a href="https://plus.google.com/share?url=http%3A%2F%2Frollercoaster.imbaa.de" rel="popup" class="googleplus">Google Plus</a></li>
+
+            </ul>
+
+
+        <ul class="list-inline">
+                <li><a href="http://www.imbaa.de" title="imbaa Kreativagentur">imbaa Kreativagentur</a></li>
+                <li class="muted">·</li>
+                <li><a data-toggle="modal" href="#impressum">Impressum</a></li>
+            </ul>
+    </footer>
+    <!-- Modal -->
+    <div class="modal fade" id="impressum">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Impressum</h4>
+                </div>
+                <div class="modal-body">
+
+                    <p><strong>imbaa Kreativagentur</strong><br>
+                        Felix Jäger / Julia Lindenberg / Ilja Zaglov Gbr<br>
+                        Max-Keith-Straße 66<br>
+                        45136 Essen</p>
+
+                    <p><strong>Verantwortlich i.S.d. § 55 RStV:</strong><br>
+                        Felix Jäger, Julia Lindenberg, Ilja Zaglov. Anschrift wie oben.<br>
+                        t.: +49 (0)201 977 07 537<br>
+                        e.: hallo@imbaa.de<br>
+                        Steuernummer: 11259002375</p>
+
+                    <strong>Copyright und Disclaimer</strong>
+
+                    <p>Für die Richtigkeit und Vollständigkeit der Informationen auf den Webseiten von imbaa wird keine Gewähr übernommen. Verwendete Grafiken, Layouts und Texte sind urheberrechtlich geschützt.</p>
+
+                    <p>Jede Weiterverwendung bedarf der ausdrücklichen schriftlichen Genehmigung. Alle verwendeten Logos und Firmennamen sind Warenzeichen oder eingetragene Warenzeichen der jeweiligen Firmen.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+</div>
+
+
+</body>
+</html>
