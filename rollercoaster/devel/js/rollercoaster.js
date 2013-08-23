@@ -46,6 +46,7 @@ function rollercoasterSlider(element){
 
 
     var paneWidth = 600;
+    var paneHeight = 600;
 
 
 
@@ -140,6 +141,7 @@ function rollercoasterSlider(element){
             function(){
                 var paneCount = $(this).children(".pane").length;
                 paneWidth = $(this).children(".pane:first-child").width();
+                paneHeight = $(this).children(".pane:first-child").height();
                 $(this).css("width",paneCount*paneWidth+"px");
                 $(this).css("margin-top",refHeight*i);
                 i++;
@@ -189,26 +191,25 @@ function rollercoasterSlider(element){
         container.removeClass("animate");
 
         if(animate) {
+
             container.addClass("animate");
         }
 
-        if(Modernizr.csstransforms3d) {
-            container.css("transform", "translate3d("+ percentX +"%,"+percentY+"%,0) scale3d(1,1,1)");
+       if(Modernizr.csstransforms3d) {
+           container.css("transform", "translate3d("+ percentX +"%,"+percentY+"%,0) scale3d(1,1,1)");
         }
 
         else if(Modernizr.csstransforms) {
-            container.css("transform", "translate("+ percentX +"%,"+percentY+"+)");
+            container.css("transform", "translate("+percentX+"%,"+percentY+"%)");
+            container.css("-ms-transform", "translate("+percentX+"%,"+percentY+"%)");
         }
 
         else {
-
-            /* var paneCount = $("section#"+container.attr("id")+" .pane").length;
-             var px = ((paneWidth*paneCount) / 100) * percentX;
-             var py = ((pane_height*paneCount) / 100) * percentY;
-             container.css("left", px+"px");
-             container.css("top", py+"px");*/
-
-
+           var paneCount = container.children(".pane").length;
+           var px = ((paneWidth*paneCount) / 100) * percentX;
+           var py = ((paneHeight*sectionCount) / 100) * percentY;
+           container.css("left", px+"px");
+           container.css("top", py+"px");
         }
 
     }

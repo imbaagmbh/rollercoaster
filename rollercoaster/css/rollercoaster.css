@@ -24,6 +24,9 @@ div.rollercoaster_slider.initialized {
   top: 0px;
   left: 0px;
 }
+div.rollercoaster_slider.initialized .section_wrapper {
+  position: absolute;
+}
 div.rollercoaster_slider.initialized .navigation_item {
   display: block;
   font-family: "yaaf";
