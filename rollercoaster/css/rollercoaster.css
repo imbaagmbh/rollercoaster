@@ -160,6 +160,11 @@ div.rollercoaster_slider.initialized section.vertical_slide .pane:nth-child(even
 }
 /* RESPONSIVE */
 @media screen and (max-width: 400px) {
+  .minimap {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
   div.rollercoaster_slider.initialized .navigation_item {
     width: 30px;
     height: 30px;
